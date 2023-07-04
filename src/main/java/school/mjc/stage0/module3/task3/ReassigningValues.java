@@ -18,5 +18,13 @@ public class ReassigningValues {
         System.out.println(second);
         System.out.println(third);
 
+        first = 1;
+        second = 10;
+        third = 100;
+
+        System.out.println(first);
+        System.out.println(second);
+        System.out.println(third);
+
     }
 }

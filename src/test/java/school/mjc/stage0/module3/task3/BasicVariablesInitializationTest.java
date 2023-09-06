@@ -14,6 +14,9 @@ import static school.mjc.parser.predicate.Dsl.declaration;
 @JavaFileSource("src/main/java/school/mjc/stage0/module3/task3/BasicVariablesInitialization.java")
 class BasicVariablesInitializationTest extends BaseIOTest {
 
+    private CompilationUnit parsed;
+    private String name;
+
     @Test
     void mainPrintsValues() {
         BasicVariablesInitialization.main(null);
@@ -34,6 +37,8 @@ class BasicVariablesInitializationTest extends BaseIOTest {
     }
 
     private boolean intVarExists(CompilationUnit parsed, String name) {
+        this.parsed = parsed;
+        this.name = name;
         return parsed.findAll(VariableDeclarator.class,
                 declaration(name).ofPrimitiveType(PrimitiveType.Primitive.INT)).size() == 1;
     }

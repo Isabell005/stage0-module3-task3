@@ -16,7 +16,7 @@ import static school.mjc.parser.Util.parse;
 public class AllowedCodeTest {
 
     @Test
-    public void verifyThatForbiddenCodeNotUsed() throws IOException {
+    public void verifyThatForbiddenCodeNotUsed() throws IOException  {
         Files.walk(Paths.get("src/main/java/school/mjc/stage0/module3/task3"))
                 .filter(Files::isRegularFile)
                 .forEach(path -> {
